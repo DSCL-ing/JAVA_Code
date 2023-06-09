@@ -1,28 +1,28 @@
-package ç±»;
+package Àà;
 
 class Animal{
     public String name;
     public int age;
     public void eat() {
-        System.out.println(name + "æ­£åœ¨åƒé¥­!");
+        System.out.println(name + "ÕıÔÚ³Ô·¹!");
     }
 }
 
 class Dog extends Animal {
     public void wangwang() {
-        System.out.println(name + "æ­£åœ¨å«!");
+        System.out.println(name + "ÕıÔÚ½Ğ!");
     }
 }
 
 class Cat extends Animal {
     public void miaomiao() {
-        System.out.println(name + "æ­£åœ¨å–µå–µå«!");
+        System.out.println(name + "ÕıÔÚß÷ß÷½Ğ!");
     }
 }
 
 class Bird extends Animal {
     public void fly(){
-        System.out.println(name + "æ­£åœ¨é£");
+        System.out.println(name + "ÕıÔÚ·É");
     }
 }
 
@@ -52,22 +52,22 @@ class Bird extends Animal {
 
 public class ClassUtil {
 
-    private int year;//å°è£…
+    private int year;//·â×°
     int month;
     public int day;
     public static int classroom = 107 ;
     public ClassUtil() {
-        this(3,3,3); //thiså¿…é¡»æ”¾åœ¨ç¬¬ä¸€è¡Œ
-        System.out.println("è°ƒç”¨äº†ä¸å¸¦å‚æ•°çš„æ„é€ æ–¹æ³•");
+        this(3,3,3); //this±ØĞë·ÅÔÚµÚÒ»ĞĞ
+        System.out.println("µ÷ÓÃÁË²»´ø²ÎÊıµÄ¹¹Ôì·½·¨");
     }
 
     public ClassUtil(int year, int month, int day) {
         this.year = year;
         this.month = month;
         this.day = day;
-//        day = 1999;   //ä¸èƒ½è¿™ä¹ˆå†™
+//        day = 1999;   //²»ÄÜÕâÃ´Ğ´
         show();
-        System.out.println("è°ƒç”¨äº†å¸¦3ä¸ªå‚æ•°çš„æ„é€ æ–¹æ³•");
+        System.out.println("µ÷ÓÃÁË´ø3¸ö²ÎÊıµÄ¹¹Ôì·½·¨");
     }
 
     public int getMonth() {
@@ -87,26 +87,26 @@ public class ClassUtil {
     }
 
     public int getYear() {
-        return this.year; //å°è£…åçš„å¯¹å¤–æ¥å£
+        return this.year; //·â×°ºóµÄ¶ÔÍâ½Ó¿Ú
     }
 
     public void setYear(int year) {
         this.year = year;
     }
 
-    @Override //Overrideæ˜¯æ³¨è§£,æ³¨è§£æœ‰å¾ˆå¤šç§
-    //ç”Ÿæˆæ–¹æ³•:å¯ä»¥åœ¨generateä¸­ç”Ÿæˆ
-    /*@Override*/ //æ­¤å¤„çš„Overrideæ„æ€æ˜¯å½“å‰æ–¹æ³•æ˜¯è¢«é‡å†™çš„
+    @Override //OverrideÊÇ×¢½â,×¢½âÓĞºÜ¶àÖÖ
+    //Éú³É·½·¨:¿ÉÒÔÔÚgenerateÖĞÉú³É
+    /*@Override*/ //´Ë´¦µÄOverrideÒâË¼ÊÇµ±Ç°·½·¨ÊÇ±»ÖØĞ´µÄ
 
-    //æ‰“å°ç±»å‹æ—¶è°ƒç”¨çš„æ–¹æ³•
+    //´òÓ¡ÀàĞÍÊ±µ÷ÓÃµÄ·½·¨
     public String toString() {
-        return "ç±».ClassUtil{" +
+        return "Àà.ClassUtil{" +
                 "year=" + year +
                 ", month=" + month +
                 ", day=" + day +
                 '}';
         /**
-         * åœ¨æ„é€ ä¸­æ‰“å°,è‡ªå·±å†™è°ƒç”¨è‡ªå·±çš„,ä¸å†™è°ƒç”¨objectç±»çš„,æ¶‰åŠåˆ°'ç»§æ‰¿'
+         * ÔÚ¹¹ÔìÖĞ´òÓ¡,×Ô¼ºĞ´µ÷ÓÃ×Ô¼ºµÄ,²»Ğ´µ÷ÓÃobjectÀàµÄ,Éæ¼°µ½'¼Ì³Ğ'
          */
     }
 
@@ -115,7 +115,7 @@ public class ClassUtil {
             year = year;
             month = month;
             day = day;
-            //é”™è¯¯! å¦‚æœä¸ç”¨thisæŒ‡æ˜,æ ¹æ®'å±€éƒ¨å˜é‡ä¼˜å…ˆä½¿ç”¨'è§„åˆ™,=å·ä¸¤è¾¹éƒ½æ˜¯ç›¸åŒçš„å±€éƒ¨å˜é‡,å³è‡ªå·±ç»™è‡ªå·±èµ‹å€¼,æ²¡æœ‰ç»™å¯¹è±¡èµ‹å€¼.
+            //´íÎó! Èç¹û²»ÓÃthisÖ¸Ã÷,¸ù¾İ'¾Ö²¿±äÁ¿ÓÅÏÈÊ¹ÓÃ'¹æÔò,=ºÅÁ½±ß¶¼ÊÇÏàÍ¬µÄ¾Ö²¿±äÁ¿,¼´×Ô¼º¸ø×Ô¼º¸³Öµ,Ã»ÓĞ¸ø¶ÔÏó¸³Öµ.
         }
 
         {
@@ -123,7 +123,7 @@ public class ClassUtil {
             this.month = month;
             this.day = day;
         }
-        //å±€éƒ¨å˜é‡ä¼˜å…ˆ
+        //¾Ö²¿±äÁ¿ÓÅÏÈ
     }
 
     public void show(ClassUtil this) {
@@ -131,9 +131,9 @@ public class ClassUtil {
     }
 
     public static void main1(String[] args) {
-//        ç±».ClassUtil classUtil = new ç±».ClassUtil();
+//        Àà.ClassUtil classUtil = new Àà.ClassUtil();
 //        System.out.println(classUtil.getYear());
-//        System.out.println(ç±».ClassUtil.classroom);
+//        System.out.println(Àà.ClassUtil.classroom);
 //        System.out.println(classUtil);
         Dog dog = new Dog();
         dog.wangwang();
@@ -142,7 +142,7 @@ public class ClassUtil {
 
     public static void main(String[] args) {
         Animal animal1 = new Dog();
-        //å‘ä¸‹è½¬å‹
+        //ÏòÏÂ×ªĞÍ
         Dog dog = (Dog) animal1;
         dog.name = "haha";
         dog.wangwang();

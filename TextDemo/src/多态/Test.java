@@ -1,23 +1,23 @@
-package å¤šæ€;
+package ¶àÌ¬;
 
 class Shape {
     public String name;
     public void draw() {
-        System.out.println(name+"ç”»å›¾å½¢");
+        System.out.println(name+"»­Í¼ĞÎ");
     }
 }
 
 class Rect extends Shape {
     @Override
     public void draw() {
-        System.out.println("ç”»çŸ©å½¢");
+        System.out.println("»­¾ØĞÎ");
     }
 }
 
 class Cycle extends Shape {
     @Override
     public void draw() {
-        System.out.println("ç”»åœ†");
+        System.out.println("»­Ô²");
     }
 }
 
@@ -25,7 +25,7 @@ class Cycle extends Shape {
 class Flower extends Shape {
     @Override
     public void draw() {
-        System.out.println("â€");
+        System.out.println("?");
     }
 }
 public class Test{
@@ -38,14 +38,14 @@ public class Test{
         Flower flower = new Flower();
 //        drawMap(rect);
 //        drawMap(cycle);
-        //å¤šæ€æ³•:åœˆå¤æ‚åº¦ä¸º1,åªæœ‰1ä¸ªå¾ªç¯,æ²¡æœ‰æ¡ä»¶è¯­å¥
-        Shape[] shape = {rect, cycle, rect, cycle, flower}; //å‘ä¸Šè½¬å‹:çˆ¶ç±»ç±»å‹å¯¹è±¡æ˜¯å­ç±»
+        //¶àÌ¬·¨:È¦¸´ÔÓ¶ÈÎª1,Ö»ÓĞ1¸öÑ­»·,Ã»ÓĞÌõ¼şÓï¾ä
+        Shape[] shape = {rect, cycle, rect, cycle, flower}; //ÏòÉÏ×ªĞÍ:¸¸ÀàÀàĞÍ¶ÔÏóÊÇ×ÓÀà
         for (Shape s : shape) {
             drawMap(s);
         }
 
-        //æ¡ä»¶è¯­å¥
-        //åœˆå¤æ‚åº¦é«˜,1å¾ªç¯3æ¡ä»¶
+        //Ìõ¼şÓï¾ä
+        //È¦¸´ÔÓ¶È¸ß,1Ñ­»·3Ìõ¼ş
         String[] string ={"rect", "cycle", "rect", "cycle", "flower"} ;
         for (String s : string) {
             if (s.equals("rect")) {
