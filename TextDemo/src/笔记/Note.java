@@ -22,6 +22,15 @@ import java.util.Scanner;
  *
  */
 
+//一些方法
+
+/**
+ * Character.isDigit(ch):判断字符是否是数字
+ * Characher.isLetter(ch):判断字符是否是字母
+ *  0-9 , a-z
+ *
+ */
+
 
 public class Note {
 
@@ -171,7 +180,7 @@ public class Note {
 
             /* 拓展: 引用类型             */
             /**
-             * JVM对内存的划分(java虚拟机运行时数据区)
+             * JVM对内存的划分(java虚拟机运行时数据区),(逻辑上)
              * 1.java虚拟机栈(Java Stack); 2.堆（Heap）; 3.本地方法栈(Native Method Stack); 4.方法区(Method Area); 5.程序计数器(Program Counter Register);
              * 其中Java虚拟机栈就是平时使用的栈(Stack)
              * 为什么数组是引用类型?
@@ -181,6 +190,9 @@ public class Note {
              * d.数组通过数组存放的地址引用了对应地址上的数据
              * 存了地址的变量,就称作引用变量
              * 如果直接对数组名打印,则会输出：[I@1b6d3586; 其中'['中括号代表组数。 'I'I代表int,整型。 @为分隔符 。后面一串1b6d3586暂且可以看作地址
+             *
+             * 方法区其实在堆上
+             *
              */
 
             //数组本身的地址在java中取不到
