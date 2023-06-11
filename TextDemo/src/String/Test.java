@@ -1,7 +1,7 @@
 package String;
 
 public class Test {
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
 
         //str1 和str2 等价
         String str1 = "hello";
@@ -14,6 +14,134 @@ public class Test {
     //String 类
     /**
      * String只有两个类成员
+     *
+     * ""字符串常量也是String类型,可以使用String方法
      */
+
+    public static void main2(String[] args) {
+        String str1 = "hello";
+
+        //length:输出字符串字符个数
+        System.out.println(str1.length());//5
+
+        String str2 = "";
+        //isEmpty:判断字符串是否为0个字符,是则true,否则false
+        System.out.println(str2.isEmpty());//true
+        /*注意:不能使用在str = null; 没有实体*/
+
+        //equals:比较两个对象内容是否一致
+        System.out.println(str1.equals(str2));//false
+        //equalsIgnoreCase:忽略大小写比较对象内容是否一致
+        System.out.println(str1.equalsIgnoreCase(str2));
+
+        //compareTo:比较两个对象内容大小,返回ascii差或长度差
+        System.out.println(str1.compareTo(str2));
+         //compareToIgnoreCase:忽略大小写比较两个对象内容大小
+        System.out.println(str1.compareToIgnoreCase(str2));
+
+    }
+
+    public static void main3(String[] args) {
+        String str1 = "hellohello";
+
+        //获取字符串中的某个位置的字符
+        char ch = str1.charAt(1);
+        System.out.println(ch);//e
+
+        //获取字符串中某个字符第一次出现的位置
+        System.out.println(str1.indexOf('e'));//1
+        //从指定位置开始找某个字符
+        System.out.println(str1.indexOf('o',1));//4
+        //模式匹配(设计KMP)
+        System.out.println(str1.indexOf("ll"));//2
+
+        //从后往前找某字符,返回正序位置
+        System.out.println(str1.lastIndexOf('e'));//6
+        //在正序某位置开始从后往前找
+        System.out.println(str1.lastIndexOf('o',8));//4
+        //从后往前模式匹配
+        //在正序某位置开始从后往前模式匹配
+    }
+
+    public static void main4(String[] args) {
+        //将不同类型转成字符串(类名直接调用方法:静态方法)
+        String str1 = String.valueOf(1234);
+        System.out.println(str1);
+
+        //将字符串解析转成其他类型(类名直接调用方法:静态方法)
+        String str2 = "123";//必须全是整型(同一类型),否则异常
+        int value = Integer.parseInt(str2);
+        System.out.println(value);
+
+        //大小写转换
+        //str.toUpperCase():转大写
+        //str.toLowerCase():转小写
+
+        //字符串转数组(字符数组)
+        //str.toCharArray()
+
+        //格式化输出
+        //String.format("%d-%d-%d".2000,1,1).sout;
+
+        //字符串替换
+        //str.replace('a','b');//把所有的a换成b
+        //str.replace("ab","cd");//把所有的ab换成cd
+        //str.replaceAll("ab","cd");//和2一样
+        //str.replaceFirst("a","b");//替换第一个
+
+    }
+
+    public static void main(String[] args) {
+        //str.split("regex"):字符串拆分(regex:正则表达式)
+        System.out.println("=======字符串\"空格\"拆分==========");
+        String str1 = "how are you";
+        String[] strs1 = str1.split(" "); //regex为String类型
+        for (String x : strs1) {
+            System.out.println(x);
+        }
+
+        System.out.println("======带分组限制的字符串拆分===========");
+        //str.split("regex",limit):带分组限制的字符串拆分
+        String[] strs2 = str1.split(" ", 2);
+        for (int i = 0; i < strs2.length; i++) {
+            System.out.println(strs2[i]);
+        }
+        /*运行到n组就停止,不再分割*/
+
+        System.out.println("=========.分隔符========");
+        //转义
+        String str3 = "192.168.0.1";
+        String[] strs3 = str3.split("\\.");
+        for (String x : strs3) {
+            System.out.println(x);
+        }
+
+        System.out.println("=======\"//\"分隔符==========");
+        String str4 = "192\\168\\1";
+        String[] strs4 = str4.split("\\\\");
+        for (String x : strs4) {
+            System.out.println(x);
+        }
+
+        System.out.println("========不同分割符=========");
+        String str5 = "192&168=1";
+        String[] strs5 = str5.split("&|=");
+        for (String x : strs5) {
+            System.out.println(x);
+        }
+        /**
+         * "."是正则表达式中特殊符号(通配符),需要转义让他成为普通符号,"\."就代表普通符号,故写成"\\."
+         * 如果写成"\."是不对的,因为没有\.这个转义字符,是非法转义字符,会报错;也不符合普通符号规则
+         * 还有一些特殊符号,如"|", "*", "+", "\"
+         * "\"需要写成"\\\\"
+         * 多个分割符用"|"分隔
+         */
+
+
+    }
+
+    public static void main6(String[] args) {
+        System.out.println("\\.");
+    }
 
 }
