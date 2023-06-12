@@ -1,14 +1,16 @@
 package String;
 
 public class Test {
+    //字符串构造
     public static void main1(String[] args) {
 
         //str1 和str2 等价
-        String str1 = "hello";
-        String str2 = new String("hello");
+        String str1 = "hello";         //法1
+        String str2 = new String("hello");//法2
+
         //字符数组,没有'\0',需要调用String构造转化
         char[] values = {'a', 'b', 'c', 'd'};
-        String str3 = new String(values);
+        String str3 = new String(values);//法3
     }
 
     //String 类
@@ -18,6 +20,9 @@ public class Test {
      * ""字符串常量也是String类型,可以使用String方法
      */
 
+
+
+    //String对象的比较
     public static void main2(String[] args) {
         String str1 = "hello";
 
@@ -41,6 +46,7 @@ public class Test {
 
     }
 
+    //查找
     public static void main3(String[] args) {
         String str1 = "hellohello";
 
@@ -63,6 +69,7 @@ public class Test {
         //在正序某位置开始从后往前模式匹配
     }
 
+    //转化
     public static void main4(String[] args) {
         //将不同类型转成字符串(类名直接调用方法:静态方法)
         String str1 = String.valueOf(1234);
@@ -88,9 +95,9 @@ public class Test {
         //str.replace("ab","cd");//把所有的ab换成cd
         //str.replaceAll("ab","cd");//和2一样
         //str.replaceFirst("a","b");//替换第一个
-
     }
 
+    //拆分
     public static void main5(String[] args) {
         //str.split("regex"):字符串拆分(regex:正则表达式)
         System.out.println("=======字符串\"空格\"拆分==========");
@@ -149,7 +156,7 @@ public class Test {
         }
 
     }
-
+    //截取
     public static void main6(String[] args) {//6
         //str.substring(n)字符串截取
         System.out.println("=======字符串截取============");
@@ -167,6 +174,11 @@ public class Test {
         String str3 = "     hello           ";
         String s3 = str3.trim();
         System.out.println(s3);
+
+        //str.contains():包含:判定字符串中是否包含某个子字符串
+        System.out.println("======判定字符串中是否包含某个子字符串=============");
+        String str4 = "hello";
+        System.out.println(str4.contains("ll")); //true
     }
 
 
@@ -184,6 +196,10 @@ public class Test {
      * 若存在:
      * a.如果是new的同一个内容的常量,则会在堆中开辟一个引用常量池的空间:常量已存在,堆中开辟个引用,栈再引用堆的引用
      * b.如果不是new的同一个内容的常量,就直接是栈变量引用
+     *
+     * 为了使程序的运行速度更快、
+     * 更节省内存，Java为8种基本数据类型和String类都提供了常量池。
+     *
      */
 
     //字符串常量不可修改的原因
@@ -197,7 +213,7 @@ public class Test {
     //String拼接效率非常低,少使用(不建议在循环中使用拼接)
 
 
-    public static void main(String[] args) { //7
+    public static void main7(String[] args) { //7
         //StringBuilder:
         /**
          * 直接从常量池中取出,无临时变量,效率
@@ -225,6 +241,8 @@ public class Test {
         System.out.println(str1);
 
         //Builder和buffer区别在多线程,锁,社么的
+
+        //String可以直接赋值，StringBuffer必须调用
 
     }
 
