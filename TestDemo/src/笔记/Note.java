@@ -20,6 +20,7 @@ import java.util.Scanner;
  *
  * 学一个类，要从构造方法开始
  *
+ * jdk反汇编工具 javap: javap -c 类名称
  */
 
 //一些方法
@@ -904,7 +905,41 @@ public class Note {
 
         }
 
+        //包装类
+        {        /**
+         * 包装类:基本数据类型所对应的类类型
+         * byte = Byte
+         * short = Short
+         * int = Integer     *
+         * long = Long
+         * float = Float
+         * double = Double
+         * char = Character  *
+         * boolean = Boolean
+         */
 
+        /*包装类的使用*/
+        /**
+         * 装箱:将一个基本数据类型转成包装类
+         * 自动装箱:Integer val = a;
+         * 显式装箱:
+         * 1.Integer val = Integer.valueOf(a);
+         * 2.Integer val = new Integer(a);
+         *
+         * 拆箱:将包装类转成基本数据类型
+         * 自动拆箱:
+         * 1.int a = val;
+         * 2.int a = (int)val;
+         * 显式拆箱:
+         * 1.int a = val.intValue();
+         *
+         * Integer包装类中,装包有个-127<i<128的cache数组(缓存),cache存了256个数字
+         * 如果装包不超过这个大小,则进缓存.否则new一个包装类
+         */
+
+
+
+        }
 
 
 
