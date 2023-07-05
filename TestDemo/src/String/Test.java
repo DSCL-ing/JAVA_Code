@@ -9,8 +9,8 @@ public class Test {
         String str2 = new String("hello");//法2
 
         //字符数组,没有'\0',需要调用String构造转化
-        char[] values = {'a', 'b', 'c', 'd'};
-        String str3 = new String(values);//法3
+        char[] c = {'a', 'b', 'c', 'd'};
+        String str3 = new String(c);//法3
     }
 
     //String 类
@@ -18,6 +18,9 @@ public class Test {
      * String只有两个类成员
      *
      * ""字符串常量也是String类型,可以使用String方法
+     *
+     * String 是个不变类，相当于基本类型，传参时不能改变 -- 值传递
+     *
      */
 
 
